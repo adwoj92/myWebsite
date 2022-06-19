@@ -1,3 +1,4 @@
+/*Basic Styling*/
 
 *,
 *::before,
@@ -169,7 +170,6 @@ body {
       font-weight: normal;
   }
   
-  
   ul {
       list-style-type: none;
       display: flex;
@@ -178,7 +178,6 @@ body {
   p {
     font-family: monospace;
   }
-  
   
   a {
     color:#000;
@@ -220,9 +219,9 @@ body {
   .aboutMe {
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
     overflow: hidden;
-    margin-top: 10rem;
+    margin-top: 8rem;
   
   }
   
@@ -230,8 +229,6 @@ body {
     text-align: left;
     font-size: 1.5rem;
     width: 45rem;
-    margin-left: 20rem;
-    margin-bottom: 15rem;
     color: white;
     background-color: rgb(179, 48, 255);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
@@ -240,21 +237,27 @@ body {
     opacity: 0;
   }
   
-  
   .bio p {
     margin: 2rem;
     line-height: 2rem;
     
   }
   
+  .bio-card {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    position: relative;
+  }
+
   .imageOfMe {
-    position: absolute;
+    position: relative;
     opacity: 0;
-    width: 35rem;
     height: auto;
     border: white solid 2rem;
-    left: 56rem;
-    
+    width: 35rem;
+    margin-left: -9rem;
+    margin-top: 10rem;  
   }
   
   .visible {
@@ -296,7 +299,231 @@ body {
   }
 }
 
+@media only screen and (max-width: 1349px) {
 
+  .wheelCogAnimation, .wheelCogLarge, .wheelCogMedium, .wheelCogSmall{
+    display: none;
+  }
+  
+  .intro {
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav {
+    background-color: #e4d5b9;
+    z-index: 10;
+    width: 100%;
+    position: fixed; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: black solid 0.1rem;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    -webkit-animation: slideIn 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.7s both;
+            animation: slideIn 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.7s both;
+  }
+  
+  .email-on-side {
+    position: fixed;
+    transform: rotate(90deg);
+    right: -4rem;
+    bottom: 6rem;
+    font-size: 1.5rem;
+    -webkit-animation: fadeIn 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 4s both;
+            animation: fadeIn 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 4s both;       
+  }
+  
+  .email-on-side p:hover {
+    opacity: 1;
+  }
+  
+  .email-on-side p {
+    opacity: 0.5;
+  }
+  
+  .greetingText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: #000;
+    background-color: var(--bg-color);
+    margin-left: 8rem;
+    font-family: 'Roboto', sans-serif;
+    opacity: 0.9;
+    margin-top: 10rem;
+    margin-right: 7rem;
+  }
+  
+  .greetingText1 {
+    margin-bottom: 5rem;
+    text-decoration: underline;
+    text-decoration-color: rgb(179, 48, 255);
+    text-decoration-thickness: 5px;
+    text-underline-offset: 0.5rem;
+  }
+  
+  .lingo-icons {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    bottom: 1rem;
+    left: 1rem;
+    -webkit-animation: fadeIn 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 4s both;
+            animation: fadeIn 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 4s both;
+  }
+  
+  .lingo-icons img {
+    width: 3rem;
+    height: auto;
+    margin: 0.4rem;
+    opacity: 0.5; 
+    -webkit-transition: opacity .2s;
+            transition: opacity .2s; 
+  }
+  
+  .lingo-icons img:hover {
+    opacity: 1;
+  }
+  
+  h1{
+      font-size: 5em;
+      font-weight: normal;
+  }
+  
+  ul {
+      list-style-type: none;
+      display: flex;
+  }
+  
+  p {
+    font-family: monospace;
+  }
+  
+  a {
+    color:#000;
+    text-decoration: none;
+  }
+  
+  li {
+    margin: 1rem 3rem;
+    font-size: 2rem;
+    background: 
+        linear-gradient(rgb(179, 48, 255) 0 0) 
+        bottom /var(--d, 0) 2px 
+        no-repeat;
+    transition:0.5s;
+    font-family: monospace;
+  }
+  
+  li:hover {
+  cursor: pointer;
+  --d: 100%;
+  }
+  
+  .logoTransparent {
+    width: 5rem;
+    height: auto;
+    position: absolute;
+    left: 3rem;
+    top: 0.8rem;
+    opacity: 0.8;
+    -webkit-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+  }
+  
+  .logoTransparent:hover {
+    transform: scale(0.7);
+  }
+  
+  
+  .aboutMe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .bio-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8rem;
+    margin-left: 6rem;
+  }
+  
+  .bio {
+    text-align: left;
+    font-size: 1.5rem;
+    width: 45rem;
+    color: white;
+    background-color: rgb(179, 48, 255);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    z-index: 5;
+    position: relative;
+    opacity: 0;
+    margin-right: 10rem;
+  }
+  
+  .bio p {
+    margin: 2rem;
+    line-height: 2rem;
+  }
+  
+  .imageOfMe {
+    position: relative;
+    opacity: 0;
+    width: 35rem;
+    height: auto;
+    border: white solid 2rem;
+    margin-top: -4rem;
+    margin-left: 14rem;
+  }
+
+  .visible {
+    opacity: 1;
+    -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+  
+  .home-title span{
+      position: relative;
+      overflow: hidden;
+      display: block;
+      line-height: 1.2;
+  }
+  
+  .home-title span::after{
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: rgb(179, 48, 255);
+      animation: a-ltr-after 2s cubic-bezier(.77,0,.18,1) forwards;
+      transform: translateX(-101%);
+  }
+  
+  .home-title span::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--bg-color);
+      animation: a-ltr-before 2s cubic-bezier(.77,0,.18,1) forwards;
+      transform: translateX(0);
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+
+}
+
+/*Animations*/
 
 .home-title span:nth-of-type(1)::before,
 .home-title span:nth-of-type(1)::after{
