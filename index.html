@@ -10,23 +10,29 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
   <script src="./intersectionObserver.js" defer></script>
-  <script src="./dropdownMenu.js" defer></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="./burgerMenu.js"></script>
   <link rel="icon" type="image/x-icon" href="./res/logoTransparent.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
   <header>
-    <nav>
-      <a href="#"><img src="./res/logoTransparent.png" alt="logoTransparent" class="logoTransparent"> </a>
+    <div class="mobile-buttons"> 
+      <a href="#"><img src="./res/logoTransparent.png" alt="logoTransparent" class="logoTransparent"></a>
+      <img src="./res/rounded__menu-512.webp" alt="hamburger-icon" class="hamburger-button">
+    </div>
+    
+    <nav class="navigation">
+      <a href="#"><img src="./res/logoTransparent.png" alt="logoTransparent" class="logoTransparentNav"></a>    
       <ul>
-        <a href="#"><li class="list1">Home</li></a>
-        <a href="#bio"><li class="list2">About Me</li></a>
-        <a href="#"><li class="list3">Contact</li></a>          
+        <li class="menu-item"><a href="#">Home</a></li>
+        <li class="menu-item"><a href="#bio">About Me</a></li>
+        <li class="menu-item"><a href="#">Contact</a></li>         
       </ul>                 
     </nav> 
   </header>
   <main>
-    <section class="intro">
+    <section class="intro">    
       <div class="wheelCogAnimation">
           <img src="./res/wheelCogLarge.png" alt="wheelCogLarge" class="wheelCogLarge">
           <img src="./res/wheelCogMedium.png" alt="wheelCogMedium" class="wheelCogMedium">
@@ -66,9 +72,7 @@
         </p>                 
       </div>
         <img src="./res/18767891_1699828510044714_5038670049750591134_n.jpg" alt="" class="imageOfMe" id="imageOfMe">
-      </div>
-      
-       
+      </div> 
     </section>        
   </main>
 </body>

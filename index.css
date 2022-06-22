@@ -99,6 +99,10 @@ nav {
 
 .lingo-icons img:hover {
   opacity: 1;
+} 
+
+.hamburger-button {
+  display: none;
 }
 
 h1 {
@@ -136,13 +140,14 @@ cursor: pointer;
 --d: 100%;
 }
 
+
 .logoTransparent {
   width: 5rem;
   height: auto;
   position: absolute;
   left: 3rem;
   top: 0.8rem;
-  opacity: 0.8;
+  opacity: 0.7;
   -webkit-transition: all .2s ease-in-out;
           transition: all .2s ease-in-out;
 }
@@ -300,6 +305,21 @@ cursor: pointer;
     margin-left: -9rem;
     margin-top: 10rem;  
   }
+
+  .logoTransparent {
+    display: none;
+  }
+
+  .logoTransparentNav {
+    width: 5rem;
+    height: auto;
+    position: absolute;
+    left: 3rem;
+    top: 0.8rem;
+    opacity: 0.7;
+    -webkit-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+  }
 }
 
 @media screen and (max-width: 1349px) {
@@ -357,10 +377,25 @@ cursor: pointer;
     margin-top: -4rem;
     margin-left: 14rem;
   }
+
+  .logoTransparent {
+    display: none;
+  }
+
+  .logoTransparentNav {
+    width: 5rem;
+    height: auto;
+    position: absolute;
+    left: 3rem;
+    top: 0.8rem;
+    opacity: 0.7;
+    -webkit-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+  }
 }
 
 @media screen and (max-width: 1023px) {
-  .wheelCogAnimation, .wheelCogLarge, .wheelCogMedium, .wheelCogSmall{
+  .wheelCogAnimation, .wheelCogLarge, .wheelCogMedium, .wheelCogSmall, .logoTransparent {
     display: none;
   }
   
@@ -382,8 +417,11 @@ cursor: pointer;
   h1{
       font-size: 4rem;
   }
+
   
-  .logoTransparent {
+  
+  
+  .logoTransparentNav {
     width: 4.5rem;
     height: auto;
     position: absolute;
@@ -434,32 +472,51 @@ cursor: pointer;
 
 @media screen and (max-width: 768px) {
 
-  .wheelCogAnimation, .wheelCogLarge, .wheelCogMedium, .wheelCogSmall, .lingo-icons, .email-on-side, nav {
+  .wheelCogAnimation, .wheelCogLarge, .wheelCogMedium, .wheelCogSmall, .lingo-icons, .email-on-side {
     display: none;
   }
   nav {
     background-color: #e4d5b9;
-    z-index: 10;
+    z-index: 25;
     width: 100%;
     position: fixed; 
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     border-bottom: black solid 0.1rem;
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-    -webkit-animation: slideIn 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.7s both;
-            animation: slideIn 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.7s both;
+    -webkit-animation: slideIn 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: slideIn 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   }
 
   li {
     margin: 1rem;
-    font-size: 1.3rem;
-    background: 
-        linear-gradient(rgb(179, 48, 255) 0 0) 
-        bottom /var(--d, 0) 2px 
-        no-repeat;
-    transition:0.5s;
+    font-size: 2.5rem;
     font-family: monospace;
+    text-align: center;
+  }
+
+  ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .mobile-buttons {
+    position: fixed;
+    z-index: 25;
+    -webkit-animation: fadeIn 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 3.5s both;
+    animation: fadeIn 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 3.5s both;
+  }
+
+  .hamburger-button {
+    width: 4rem;
+    height: auto;
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    opacity: 0.7;
+    z-index: 25;
+    display: block;
   }
 
   .greetingText {
@@ -480,17 +537,15 @@ cursor: pointer;
     width: 3rem;
     height: auto;
     position: absolute;
-    left: 2rem;
-    top: 1.2rem;
-    opacity: 0.8;
-    -webkit-transition: none;
-            transition: none;
+    left: 1.5rem;
+    top: 1.5rem;
+    opacity: 0.7;
+    display: block;
   }
 
   .logoTransparent:hover {
     transform: none;
   }
-  
   
 
   .bio-card {
@@ -529,6 +584,56 @@ cursor: pointer;
     margin: 0;
     margin-top: -2rem;
   }
+
+  .logoTransparentNav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .greetingText {
+    margin-left: 2.5rem;
+    margin-top: 8rem;
+    margin-right: 2.5rem;
+  }
+
+  .greetingText1 {
+    text-underline-offset: 0rem;
+  }
+
+  .bio {
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    background-color: rgb(179, 48, 255);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    z-index: 5;
+    position: relative;
+    opacity: 0;
+    width: 100%;
+    margin: 0;
+  }
+  
+  .bio p {
+    margin: 0rem;
+    line-height: 2rem;
+  }
+
+  .imageOfMe {
+    position: relative;
+    opacity: 0;
+    width: 100%;
+    height: auto;
+    border: white solid 2rem;
+    margin: 0;
+    margin-top: -2rem;
+  }
+
 
 }
 

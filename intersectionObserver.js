@@ -4,7 +4,7 @@ const bio = document.querySelector('.bio');
 const options = {
     root: null,
     threshold: 0,
-    rootMargin: "-200px"
+    rootMargin: "-100px"
 };
 
 const observer = new IntersectionObserver(function(entries, observer) {
