@@ -141,7 +141,7 @@ cursor: pointer;
 }
 
 
-.logoTransparent {
+.logoTransparentNav {
   width: 5rem;
   height: auto;
   position: absolute;
@@ -152,7 +152,7 @@ cursor: pointer;
           transition: all .2s ease-in-out;
 }
 
-.logoTransparent:hover {
+.logoTransparentNav:hover {
   transform: scale(0.7);
 }
 
@@ -620,7 +620,7 @@ cursor: pointer;
   }
   
   .bio p {
-    margin: 0rem;
+    margin: 2rem;
     line-height: 2rem;
   }
 
