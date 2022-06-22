@@ -8,4 +8,8 @@ $(document).ready(() => {
             $('.navigation').hide();
         }     
     })
+
+    if ($(windows).width() > 768) {
+        $('.navigation').show();
+    }
 });

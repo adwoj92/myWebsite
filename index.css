@@ -114,6 +114,11 @@ p {
   font-family: monospace;
 }
 
+.bio p {
+  margin: 2rem;
+  line-height: 2rem;  
+}
+
 ul {
   list-style-type: none;
   display: flex;
@@ -283,11 +288,7 @@ cursor: pointer;
     opacity: 0;
   }
   
-  .bio p {
-    margin: 2rem;
-    line-height: 2rem;
-    
-  }
+  
   
   .bio-card {
     display: flex;
@@ -363,11 +364,6 @@ cursor: pointer;
     margin-right: 10rem;
   }
   
-  .bio p {
-    margin: 2rem;
-    line-height: 2rem;
-  }
-  
   .imageOfMe {
     position: relative;
     opacity: 0;
@@ -418,9 +414,6 @@ cursor: pointer;
       font-size: 4rem;
   }
 
-  
-  
-  
   .logoTransparentNav {
     width: 4.5rem;
     height: auto;
@@ -453,11 +446,6 @@ cursor: pointer;
     margin-right: 10rem;
   }
   
-  .bio p {
-    margin: 2rem;
-    line-height: 2rem;
-  }
-  
   .imageOfMe {
     position: relative;
     opacity: 0;
@@ -469,6 +457,7 @@ cursor: pointer;
   }
 
 }
+
 
 @media screen and (max-width: 768px) {
 
@@ -570,11 +559,6 @@ cursor: pointer;
     margin: 0;
   }
   
-  .bio p {
-    margin: 2rem;
-    line-height: 2rem;
-  }
-  
   .imageOfMe {
     position: relative;
     opacity: 0;
@@ -618,11 +602,6 @@ cursor: pointer;
     width: 100%;
     margin: 0;
   }
-  
-  .bio p {
-    margin: 2rem;
-    line-height: 2rem;
-  }
 
   .imageOfMe {
     position: relative;
@@ -634,6 +613,42 @@ cursor: pointer;
     margin-top: -2rem;
   }
 
+
+}
+
+@media screen and (orientation:landscape) {
+  
+  li {
+    font-size: 1.5rem;
+  }
+
+  .logoTransparentNav {
+    width: 3rem;
+    height: auto;
+    top: .5rem;
+    left: 1rem;
+  }
+
+  .logoTransparentNav:hover {
+    transform: none;
+  }
+
+  ul {
+    margin: 0;
+  }
+
+  .lingo-icons img {
+    width: 2rem;
+    height: auto;
+  }
+
+  .lingo-icons img:hover {
+    opacity: 0.5;
+  } 
+
+  .email-on-side p {
+    font-size: 1.2rem;
+  }
 
 }
 
