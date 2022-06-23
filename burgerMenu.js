@@ -5,7 +5,7 @@ $(document).ready(() => {
 
     $('.menu-item').on('click', () => {
         if ($(window).width() < 768) {
-            $('.navigation').hide();
+            $('.navigation').slideUp(250);
         }     
     })
 });
@@ -13,14 +13,15 @@ $(document).ready(() => {
 $(window).scroll(() => {
     if ($(this).scrollTop() > 50 && $(window).width() < 768)
      {
-        $('.navigation').hide();
-     } else {
-        $('.navigation').show();
+        $('.navigation').slideUp(250);
      }
 });
 
 $(window).resize(() => {
     if ($(window).width() > 768 ) {
         $('.navigation').show();
+    }
+    if ($(window).width() < 768 ) {
+        $('.navigation').hide();
     }
 })
