@@ -8,8 +8,19 @@ $(document).ready(() => {
             $('.navigation').hide();
         }     
     })
+});
 
-    if ($(windows).width() > 768) {
+$(window).scroll(() => {
+    if ($(this).scrollTop() > 50 && $(window).width() < 768)
+     {
+        $('.navigation').hide();
+     } else {
+        $('.navigation').show();
+     }
+});
+
+$(window).resize(() => {
+    if ($(window).width() > 768 ) {
         $('.navigation').show();
     }
-});
+})

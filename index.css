@@ -43,8 +43,8 @@ nav {
   align-items: center;
   border-bottom: black solid 0.1rem;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-  -webkit-animation: slideIn 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.7s both;
-          animation: slideIn 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.7s both;
+  -webkit-animation: slideIn 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          animation: slideIn 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .intro {
@@ -58,8 +58,8 @@ nav {
   right: -4rem;
   bottom: 6rem;
   font-size: 1.5rem;
-  -webkit-animation: fadeIn 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 4s both;
-          animation: fadeIn 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 4s both;       
+  -webkit-animation: fadeIn 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
+          animation: fadeIn 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;       
 }
 
 .email-on-side p:hover {
@@ -84,8 +84,8 @@ nav {
   flex-direction: column;
   bottom: 1rem;
   left: 1rem;
-  -webkit-animation: fadeIn 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 4s both;
-          animation: fadeIn 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 4s both;
+  -webkit-animation: fadeIn 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
+          animation: fadeIn 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
 }
 
 .lingo-icons img {
@@ -189,7 +189,7 @@ cursor: pointer;
   width: 100%;
   height: 100%;
   background: rgb(179, 48, 255);
-  animation: a-ltr-after 2s cubic-bezier(.77,0,.18,1) forwards;
+  animation: a-ltr-after 0.5s cubic-bezier(.77,0,.18,1) forwards;
   transform: translateX(-101%);
 }
 
@@ -201,7 +201,7 @@ cursor: pointer;
   width: 100%;
   height: 100%;
   background: var(--bg-color);
-  animation: a-ltr-before 2s cubic-bezier(.77,0,.18,1) forwards;
+  animation: a-ltr-before 0.5s cubic-bezier(.77,0,.18,1) forwards;
   transform: translateX(0);
 }
 
@@ -210,8 +210,8 @@ cursor: pointer;
     position: absolute;
     top: 35rem;
     left: 45rem;
-    -webkit-animation: fadeIn 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 4s both;
-    animation: fadeIn 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 4s both;
+    -webkit-animation: fadeIn 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
+    animation: fadeIn 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
     z-index: 5;
   }
   
@@ -493,8 +493,8 @@ cursor: pointer;
   .mobile-buttons {
     position: fixed;
     z-index: 25;
-    -webkit-animation: fadeIn 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 3.5s both;
-    animation: fadeIn 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 3.5s both;
+    -webkit-animation: fadeIn 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
+    animation: fadeIn 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
   }
 
   .hamburger-button {
@@ -504,7 +504,7 @@ cursor: pointer;
     right: 1rem;
     top: 1rem;
     opacity: 0.7;
-    z-index: 25;
+    z-index: 30;
     display: block;
   }
 
@@ -616,7 +616,7 @@ cursor: pointer;
 
 }
 
-@media screen and (orientation:landscape) {
+@media screen and (max-width: 1024px) and (orientation:landscape) {
   
   li {
     font-size: 1.5rem;
@@ -635,6 +635,7 @@ cursor: pointer;
 
   ul {
     margin: 0;
+    justify-content: center;
   }
 
   .lingo-icons img {
@@ -656,12 +657,12 @@ cursor: pointer;
 
 .home-title span:nth-of-type(1)::before,
 .home-title span:nth-of-type(1)::after{
-    animation-delay: 1s;
+    animation-delay: 0.5s;
 }
 
 .home-title span:nth-of-type(2)::before,
 .home-title span:nth-of-type(2)::after{
-    animation-delay: 1.5s;
+    animation-delay: 1s;
 }
 
 @keyframes a-ltr-after{
