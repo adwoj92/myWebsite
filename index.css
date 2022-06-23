@@ -47,6 +47,17 @@ nav {
           animation: slideIn 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.5rem;
+}
+
+.footer p {
+  font-size: 1rem;
+}
+
 .intro {
   display: flex;
   justify-content: center;
@@ -94,9 +105,7 @@ nav {
           transition: opacity .2s; 
 }
 
-.lingo-icons img:hover {
-  opacity: 1;
-} 
+
 
 .hamburger-button {
   display: none;
@@ -137,10 +146,6 @@ li {
   font-family: monospace;
 }
 
-li:hover {
-cursor: pointer;
---d: 100%;
-}
 
 
 .logoTransparentNav {
@@ -154,9 +159,7 @@ cursor: pointer;
           transition: all .2s ease-in-out;
 }
 
-.logoTransparentNav:hover {
-  transform: scale(0.7);
-}
+
 
 .aboutMe {
     display: flex;
@@ -284,8 +287,6 @@ cursor: pointer;
     position: relative;
     opacity: 0;
   }
-  
-  
   
   .bio-card {
     display: flex;
@@ -531,11 +532,6 @@ cursor: pointer;
     display: block;
   }
 
-  .logoTransparent:hover {
-    transform: none;
-  }
-  
-
   .bio-card {
     display: flex;
     flex-direction: column;
@@ -615,7 +611,7 @@ cursor: pointer;
 
 }
 
-@media screen and (max-width: 1024px) and (orientation:landscape) {
+@media screen and (max-width: 1023px) and (orientation:landscape) {
 
   .greetingText {
     margin-top: 6rem;
@@ -634,17 +630,11 @@ cursor: pointer;
     background: none;
   }
 
-  
-
   .logoTransparentNav {
     width: 3rem;
     height: auto;
     top: .5rem;
     left: 1rem;
-  }
-
-  .logoTransparentNav:hover {
-    transform: none;
   }
 
   ul {
@@ -657,14 +647,32 @@ cursor: pointer;
     height: auto;
   }
 
-  .lingo-icons img:hover {
-    opacity: 0.5;
-  } 
+  
 
   .email-on-side p {
     font-size: 1.2rem;
   }
 
+}
+
+@media (hover: hover) and (pointer: fine) {
+
+  .lingo-icons img:hover {
+    opacity: 1;
+  } 
+
+  li:hover {
+    cursor: pointer;
+    --d: 100%;
+    }
+
+    .logoTransparentNav:hover {
+      transform: scale(0.7);
+    }
+
+    .lingo-icons img:hover {
+      opacity: 0.5;
+    } 
 }
 
 /*Animations*/
