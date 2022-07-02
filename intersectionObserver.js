@@ -1,5 +1,6 @@
 const image = document.querySelector('.imageOfMe');
 const bio = document.querySelector('.bio');
+const email = document.querySelector('.email-card');
 
 const options = {
     root: null,
@@ -19,3 +20,4 @@ const observer = new IntersectionObserver(function(entries, observer) {
 
 observer.observe(image);
 observer.observe(bio);
+observer.observe(email);
