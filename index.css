@@ -170,11 +170,11 @@ li {
 
 
 .logoTransparentNav {
-  width: 5rem;
+  width: 4.5rem;
   height: auto;
   position: absolute;
   left: 3rem;
-  top: 0.8rem;
+  top: 1rem;
   opacity: 0.7;
   -webkit-transition: all .2s ease-in-out;
           transition: all .2s ease-in-out;
@@ -331,11 +331,11 @@ li {
   }
 
   .logoTransparentNav {
-    width: 5rem;
+    width: 4.5rem;
     height: auto;
     position: absolute;
     left: 3rem;
-    top: 0.8rem;
+    top: 1rem;
     opacity: 0.7;
     -webkit-transition: all .2s ease-in-out;
             transition: all .2s ease-in-out;
@@ -434,12 +434,12 @@ li {
   }
 
   .logoTransparentNav {
-    width: 4.5rem;
+    width: 4rem;
     height: auto;
     position: absolute;
     left: 3rem;
-    top: 1rem;
-    opacity: 0.8;
+    top: 1.2rem;
+    opacity: 0.7;
     -webkit-transition: all .2s ease-in-out;
             transition: all .2s ease-in-out;
   }
@@ -478,7 +478,7 @@ li {
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 860px) {
 
   .wheelCogAnimation, .wheelCogLarge, .wheelCogMedium, .wheelCogSmall, .email-on-side {
     display: none;
